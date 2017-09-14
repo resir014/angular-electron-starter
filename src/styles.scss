@@ -1,0 +1,167 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~normalize.css/normalize.css";
+
+@import "~styles/variables";
+@import "~styles/mixins";
+
+// Base resets
+//
+// Update the global styling of the page.
+
+html {
+  font-family: $font-family-sans-serif;
+  font-size: $root-font-size;
+  line-height: $root-line-height;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  color: $body-color;
+  background-color: $background-color;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  @include on-event {
+    text-decoration: underline;
+  }
+}
+
+
+// Typography
+//
+// Headings, body text, lists, and other typographic elements.
+
+// Headings mainly follow the typography scaling guidelines outlined here:
+// https://typecast.com/blog/a-more-modern-scale-for-web-typography
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: .5rem;
+  // font-family: $font-family-serif;
+  font-weight: 600;
+  color: $color-black;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.25;
+
+  @media (min-width: $grid-breakpoint-md) {
+    font-size: 2.5rem;
+    line-height: 1.125;
+  }
+
+  @media (min-width: $grid-breakpoint-lg) {
+    font-size: 3rem;
+    line-height: 1.05;
+  }
+}
+
+h2 {
+  font-size: 1.62rem;
+  line-height: 1.15384615;
+
+  @media (min-width: $grid-breakpoint-md) {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+
+  @media (min-width: $grid-breakpoint-lg) {
+    font-size: 2.25rem;
+  }
+}
+
+h3 {
+  font-size: 1.375rem;
+  line-height: 1.13636364;
+
+  @media (min-width: $grid-breakpoint-md) {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+
+  @media (min-width: $grid-breakpoint-lg) {
+    font-size: 1.75rem;
+  }
+}
+
+h4, h5, h6 {
+  font-size: 1.125rem;
+  line-height: 1.11111111;
+
+  @media (min-width: $grid-breakpoint-md) {
+    line-height: 1.22222222;
+  }
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+strong {
+  color: $color-black;
+}
+
+ul, ol, dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+  margin-bottom: .5rem;
+}
+
+hr {
+  position: relative;
+  margin: 1.5rem 0;
+  border: 0;
+  border-bottom: 1px solid $color-gray-200;
+}
+
+abbr {
+  font-size: 85%;
+  font-weight: bold;
+  color: $body-color;
+  text-transform: uppercase;
+
+  &[title] {
+    cursor: help;
+    border-bottom: 1px dotted $color-gray-200;
+  }
+}
+
+blockquote {
+  padding: .5rem 1rem;
+  margin: .8rem 0;
+  color: $color-gray-600;
+  border-left: .25rem solid $color-gray-200;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $grid-breakpoint-sm) {
+    padding-right: 5rem;
+    padding-left: 1.25rem;
+  }
+}

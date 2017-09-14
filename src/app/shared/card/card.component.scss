@@ -1,0 +1,66 @@
+@import "~styles/variables";
+@import "~styles/mixins";
+
+:host {
+  display: inline-block;
+  position: relative;
+  width: 194px;
+  height: 194px;
+  margin: 20px;
+  background: #fff;
+  border-radius: 4px;
+  text-align: left;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24), 0 0 2px rgba(0, 0, 0, 0.12);
+  -webkit-transition: box-shadow .5s;
+  transition: box-shadow .5s;
+  cursor: pointer;
+
+  p {
+    margin: 0;
+    padding: 0 1rem;
+    font-size: 80%;
+    color: #78909C;
+    line-height: 1.5rem;
+  }
+
+  &:hover {
+    border-color: #2196f3;
+    box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.24), 0 0 .5rem rgba(0, 0, 0, 0.12);
+    text-decoration: none;
+
+    .heading {
+      color: #2196f3;
+    }
+  }
+
+  &:active,
+  &:focus {
+    outline: 0;
+  }
+}
+
+.heading {
+  margin: 1rem 0 .5rem 0;
+  padding: 1rem 1rem 0 1rem;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: #607d8b;
+  text-transform: none;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 0 1rem;
+  line-height: 3rem;
+  border-top: 1px solid #eceff1;
+
+  a {
+    font-size: 75%;
+    color: #1976D2;
+    text-decoration: none;
+  }
+}

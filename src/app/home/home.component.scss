@@ -1,0 +1,49 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  text-align: center;
+  overflow-y: hidden;
+  background: -webkit-linear-gradient(305deg, #0D47A1, #42A5F5);
+  background: linear-gradient(145deg, #0D47A1, #42A5F5);
+  background-size: 100%;
+  background-blend-mode: multiply;
+}
+
+.hero-title {
+  margin-bottom: 2rem;
+  color: #fff;
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.welcome-button {
+  display: inline-block;
+  min-height: 2.2rem;
+  min-width: 5.5rem;
+  margin: 0 .5rem;
+  padding: 0 4rem;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  letter-spacing: .010em;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+  font-size: 1rem;
+  line-height: 3rem;
+  transition: all .3s;
+  background: rgba(255,255,255,0.87);
+  border-radius: 2px;
+  color: #1565C0;
+  font-weight: 500;
+  text-decoration: none;
+
+  &:hover {
+    background: #fff;
+    box-shadow: 0 8px 8px rgba(0,0,0,0.24), 0 0 8px rgba(0,0,0,0.12);
+    color: #1E88E5;
+  }
+}

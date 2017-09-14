@@ -1,0 +1,16 @@
+@import "~styles/variables";
+@import "~styles/mixins";
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  user-select: none;
+  cursor: default;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
