@@ -28,7 +28,7 @@ If you want to generate Angular components with Angular CLI, you **MUST** instal
 npm install -g @angular/cli
 ```
 
-### To build for development
+### Building for development
 
 You will need two terminal windows.
 
@@ -43,7 +43,7 @@ $ npm run electron:serve
 
 The Angular component contains an example of Electron and NodeJS native lib import. See [Use NodeJS Native libraries](#use-nodejs-native-libraries) if you want to import other native libraries in your project.
 
-### To build for production
+### Building for production
 
 * Using development variables (environments/index.ts): `npm run electron:dev`
 * Using production variables (environments/index.prod.ts): `npm run electron:prod`
