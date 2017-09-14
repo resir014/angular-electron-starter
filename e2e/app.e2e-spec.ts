@@ -9,6 +9,7 @@ describe('angular-electron App', () => {
   });
 
   it('should display the homepage correctly', () => {
-    expect(element(by.css('app-home h1')).getText()).toMatch('One framework');
+    expect(element(by.css('app-home h1')).getText()).toContain('One framework.');
+    expect(element(by.css('app-home h1')).getText()).toContain('Mobile & desktop.');
   });
 });
