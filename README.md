@@ -20,8 +20,6 @@ Extract it, `cd` into it, then install the dependencies with `npm`:
 $ npm install
 ```
 
-**Note:** There is currently an issue with `yarn` and `node_modules` that are only used in Electron on the backend when the application is built by the packager. For now, please use `npm` when installing dependencies.
-
 If you want to generate Angular components with Angular CLI, you **MUST** install `@angular/cli` in npm global context. Follow [the Angular CLI documentation](https://github.com/angular/angular-cli) if you have used an older version of the Angular CLI before.
 
 ``` bash
@@ -41,7 +39,7 @@ $ npm start
 $ npm run electron:serve
 ```
 
-The Angular component contains an example of Electron and NodeJS native lib import. See [Use NodeJS Native libraries](#use-nodejs-native-libraries) if you want to import other native libraries in your project.
+The Angular root component contains an example of Electron library import. See [Using NodeJS Native libraries](#using-nodejs-native-libraries) if you want to import other native libraries in your project.
 
 ### Building for production
 
@@ -61,10 +59,9 @@ Your built files are in the `/dist` folder.
 
 **Your application is optimised. Only the `/dist` folder will be included in the built executable.**
 
-### Use NodeJS Native libraries
+### Using NodeJS Native libraries
 
-Angular CLI can't import nodeJS native libs or electron libs at compile time (Webpack error). This is the reason why `webpack.config` was ejected of ng-cli.
-If you need to use NodeJS native libraries, you **MUST** add it manually in the file `webpack.config.js` in root folder.
+Angular CLI can't import NodeJS native libs or electron libs at compile time. This is the reason why `webpack.config.ts` was ejected from ng-cli. If you need to use NodeJS native libraries, you **MUST** add it manually to the Webpack config.
 
 ```js
   "externals": {
@@ -75,17 +72,17 @@ If you need to use NodeJS native libraries, you **MUST** add it manually in the 
   },
 ```
 
-Notice that all node.js v7+ native libs are already added in this sample. Feel free to remove those you don't need.
+Notice how all NodeJS v7+ native libraries are already included in this sample. Feel free to remove those you don't need.
 
 ### Browser mode
 
 To run the app in your browser, run `npm run start:web`.
 
-Note that you can't use Electron or NodeJS native libraries in this case. Check `src/app/core/ngx-electron/ngx-electron.service.ts` to watch how conditional import of electron/Native libraries is done.
+Note that you can't use Electron or NodeJS native libraries in this case. Check `src/app/core/ngx-electron/ngx-electron.service.ts` to see how conditional import of Electron/native libraries works.
 
 ### Execute E2E tests
 
-You can find end-to-end tests in /e2e folder.
+You can find end-to-end tests in the `/e2e` folder.
 
 ```bash
 # First, start a web server on port 4200
