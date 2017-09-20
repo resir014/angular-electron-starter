@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/electron",
+    "types": [
+      "node",
+      "electron"
+    ]
+  },
+  "include": [
+    "src/electron/**/*.ts",
+    "src/electron/**/*.d.ts"
+  ],
+  "exclude": [
+    "test.ts",
+    "**/*.spec.ts"
+  ]
+}

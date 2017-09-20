@@ -19,7 +19,7 @@
     "lint": "ng lint",
     "start": "webpack --watch",
     "start:web": "webpack-dev-server --content-base . --port 4200 --inline",
-    "build:electron:main": "tsc src/electron/main.ts --outDir dist/electron",
+    "build:electron:main": "tsc -p ./tsconfig.electron.json --outDir dist/electron",
     "build": "npm run clean:dist && webpack --display-error-details && npm run build:electron:main",
     "build:prod": "cross-env NODE_ENV=production npm run build",
     "clean": "npm run clean:dist && npm run clean:pkg",
