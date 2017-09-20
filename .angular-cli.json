@@ -2,7 +2,7 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
     "name": "angular-electron",
-    "ejected": true
+    "ejected": false
   },
   "apps": [
     {
@@ -22,8 +22,7 @@
       "styles": [
         "styles.scss"
       ],
-      "scripts": [
-      ],
+      "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
