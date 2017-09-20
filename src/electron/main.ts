@@ -2,6 +2,7 @@ import { app, BrowserWindow, ipcMain, screen, Menu } from 'electron';
 import setMainMenu from './menu';
 import initMainListener from './listeners';
 import * as path from 'path';
+import * as url from 'url';
 
 let win: Electron.BrowserWindow | null;
 const args = process.argv.slice(1);
@@ -28,7 +29,19 @@ function createWindow() {
   });
 
   // and load the index.html of the app.
-  win.loadURL(path.join('file://' + __dirname, '../index.html'));
+  if (serve) {
+    win.loadURL(url.format({
+      pathname: 'localhost:4200',
+      protocol: 'http:',
+      slashes: true
+    }));
+  } else {
+    win.loadURL(url.format({
+      pathname: path.join(__dirname, '../index.html'),
+      protocol: 'file:',
+      slashes: true
+    }));
+  }
 
   // Build the application main menu.
   setMainMenu(win);
